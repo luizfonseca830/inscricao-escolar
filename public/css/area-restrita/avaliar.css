@@ -1,0 +1,209 @@
+*{margin: 0; padding: 0;}
+
+html{
+    height: 100%;
+}
+
+body{
+    font-family: "Trebuchet MS", Tahoma, Arial;
+}
+
+#formulario_registro{
+    width: 920px;
+    margin: 50px auto;
+    text-align: center;
+    position: relative;
+}
+
+#formulario_registro h2, #formulario_registro h3{
+    font: 22px "Trebuchet MS", Tahoma, Arial;
+
+    color: #545454;
+    width: 100%;
+    float: left;
+    text-align: left;
+    margin-bottom: 4%;
+}
+#formulario_registro h2{
+    border-bottom: 1px solid black;
+}
+
+#formulario_registro h3{
+    color: #333;
+    font-size: 17px;
+}
+
+#formulario_registro fieldset{
+    background: white;
+    border: 0 none;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+
+    box-shadow: 0 0 15px 1px rgba(0, 0,0, 0.4);
+    padding: 20px 30px;
+
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#formulario_registro fieldset:not(:first-of-type){
+    display: none;
+}
+
+#formulario_registro input, #formulario_registro textarea, #formulario_registro select{
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    outline: none;
+    box-sizing: border-box;
+    width: 100%;
+    font: 14px "Trebuchet MS", Tahoma, Arial;
+    margin-bottom: 10px;
+}
+
+#formulario_registro input[type=file]{
+    display: none;
+
+}
+
+#formulario_registro .ajuseLeft{
+    margin-right: 5%;
+    width: 55%;
+    float: left;
+}
+#formulario_registro .ajusteRight{
+    width: 40%;
+    float: left;
+}
+
+#formulario_registro input[type=checkbox]{
+    width: 10%;
+    display: inline;
+}
+
+#formulario_registro input[type=radio]{
+    width: 5%;
+    display: inline;
+}
+
+#formulario_registro .cargos option{
+    display: none;
+}
+
+#formulario_registro p{
+    float: left;
+}
+
+#formulario_registro label{
+    /*border: 1px solid #cecece;*/
+    /*padding: 10px;*/
+    /*border-radius: 5px;*/
+    /*width: 100%;*/
+}
+
+#formulario_registro label:hover{
+    /*border: 1px solid rgba(0, 0, 0, 0.5);*/
+    /*background: #545454;*/
+    /*color: white;*/
+    /*font-weight: bold;*/
+    /*padding: 10px;*/
+    /*border-radius: 5px;*/
+    /*width: 100%;*/
+}
+
+#formulario_registro .acao {
+    width: 100px;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 12px 0;
+    float: right;
+    margin-left: 10%;
+}
+
+#formulario_registro .acao:hover{
+    background: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+#formulario_registro #progress{
+    margin-bottom: 30px;
+    overflow: hidden;
+
+    counter-reset: step;
+}
+
+#formulario_registro #progress li{
+    list-style-type: none;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    float: left;
+    background: #e96b56;
+    width: 33.33%;
+    position: relative;
+}
+
+.progress-ajuste li{
+    width: 20% !important;
+}
+
+.progress-ajuste2 li{
+    width: 25% !important;
+}
+
+#formulario_registro #progress li:before{
+    content: counter(step);
+    counter-increment: step;
+    width: 20px;
+    display: block;
+    line-height: 20px;
+    background: white;
+    color: #333;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+
+    margin: 0 auto 10px auto;
+}
+
+#formulario_registro #progress li:after{
+    content: '';
+    width: 100%;
+    background: black;
+    height: 2px;
+    position: absolute;
+    top: 9px;
+    left: -50%;
+    z-index: -1;
+}
+
+#formulario_registro #progress li:first-child:after{
+    content: none;
+}
+
+#formulario_registro #progress li.ativo:before, #formulario_registro #progress li.ativo:after{
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    text-shadow: 0 1px 0;
+}
+
+.avaliar {
+   text-align: left;
+}
+
+.anexo {
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.sem-anexo strong {
+    display: block;
+    height: 120px;
+}

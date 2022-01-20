@@ -1,0 +1,36 @@
+Nothing to migrate.
+Seeding: UsersTableSeeder
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'administrador@riobranco.ac.gov.br' for key 'users.users_email_unique' (SQL: insert into `users` (`name`, `email`, `email_verified_at`, `password`, `tipo`, `created_at`, `updated_at`) values (administrador, administrador@riobranco.ac.gov.br, 2021-03-22 10:25:59, $2y$10$3v1Wyo2y2udgnm.MpUQbH.W10TebVsCyqDc.8DnMt0ZIrCPl386g., Admin, 2021-03-22 10:25:59, 2021-03-22 10:25:59))
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:671
+    667|         // If an exception occurs when attempting to run a query, we'll format the error
+    668|         // message to include the bindings with SQL, which will make this exception a
+    669|         // lot more helpful to the developer instead of just the database's errors.
+    670|         catch (Exception $e) {
+  > 671|             throw new QueryException(
+    672|                 $query, $this->prepareBindings($bindings), $e
+    673|             );
+    674|         }
+    675|
+
+      [2m+7 vendor frames [22m
+  8   database/seeds/UsersTableSeeder.php:22
+      Illuminate\Database\Query\Builder::insert()
+
+      [2m+7 vendor frames [22m
+  16  database/seeds/DatabaseSeeder.php:15
+      Illuminate\Database\Seeder::call()
+
+   Whoops\Exception\ErrorException 
+
+  Module 'pgsql' already loaded
+
+  at Unknown:0
+    1|
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Whoops\Run::handleShutdown()
